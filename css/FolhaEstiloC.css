@@ -3,203 +3,117 @@
 
 * {
     margin: 0px;
-    text-align: left;
     padding: 0px;
+}
+:root{
+    --Rubik: "Rubik";
+    --Nothing: "Nothing You Could Do";
+
+    /*cores*/
+    --cor1: #feca0f;
+    --cor2: #ffffff;
+}
+
+html,
+body {
+    min-height: 100vh;
+    background-color: darkgray;
 }
 
 /*Aside e Paragrafos*/
 header {
-    padding-bottom: 350px;
     background-color: black;
-    position: relative;
+    text-align: center;
 }
 
-header>#titulo {
-    left: 15%;
-    position: absolute;
-    font-size: 120px;
-    color: rgb(254, 202, 15);
-    text-align: center;
-    transform: translate(0%, 55%);
+header>h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-size: 9vw;
 
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
+    font-family: var(--Rubik), Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-style: normal;
+    display: inline-block;
+    color: var(--cor1);
 }
 
-header>#nomeA {
-    top: 50%;
-    left: 40%;
-    font-size: 35px;
-    color: white;
-    text-align: center;
-    transform: translate(0%, 50%);
-    position: absolute;
+header>p {
+    padding-bottom: 50px;
+    font-size: 2vw;
 
-    font-family: "Nothing You Could Do", cursive;
+    font-family: var(--Nothing), Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: var(--cor2);
 }
-#nomeA>a{
+
+header a,
+footer a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
-#nomeA>a:hover{
+
+header a:hover,
+footer a:hover {
     text-decoration: underline;
 }
 
-aside>p {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+
+    font-family: var(--Rubik), Arial, Helvetica, sans-serif;
+    font-weight: 100;
     font-style: normal;
+    font-size: 2.5vw;
 }
 
-#part1 {
-    background-color: rgb(255, 255, 255);
+section.normal {
+    background-color: white;
+    color: black;
+    padding: 40px;
+}
+
+section.imagem {
+    color: white;
+}
+section#img1{
+    background-image: url(../imagens/background001.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: right top;
-    max-height: 100px;
-    min-height: 600px;
-    background-size: cover;
+}
+section#img2{
+    background-image: url(../imagens/background002.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    padding: 50px 0px 0px 50px;
-
-    box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.51);
-}
-
-#part2 {
-    background-image: url("../imagens/background001.jpg");
-    /*background-color: blue;*/
-    background-position: right center;
-    max-height: 100px;
-    min-height: 600px;
     background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 50px 0px 0px 50px;
-
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.51);
+    background-position: right top;
 }
 
-#part3 {
-    background-color: rgb(255, 255, 255);
-    max-height: 100px;
-    min-height: 1200px;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 55px 0px 0px 50px;
-
-    box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.51);
-
-}
-
-#part4 {
-    background-image: url("../imagens/background002.jpg");
-    /*background-color: blue;*/
-    background-position: right center;
-    max-height: 100px;
-    min-height: 600px;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 50px 0px 0px 50px;
-
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.51);
-
-}
-
-#part5 {
-    background-color: rgb(255, 255, 255);
-    max-height: 100px;
-    min-height: 1350px;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 130px 0px 0px 50px;
-
-    box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.51);
-}
-
-#text1 {
-    width: 500px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    font-size: 40px;
-    line-height: 75px;
-    color: rgb(0, 0, 0);
-    outline-style: dotted;
-    outline-color: rgb(211, 211, 211);
-}
-
-#text2 {
-    width: 500px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    font-size: 40px;
-    line-height: 75px;
-    color: rgb(254, 202, 15);
-    outline-style: dotted;
-    outline-color: rgb(69, 69, 69);
-}
-
-#text3 {
-    width: 500px;
+section.imagem>p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.482);
+    display: block;
+    width: 50vw;
     padding: 20px;
-    border-radius: 10px;
-    font-size: 40px;
-    line-height: 75px;
-    color: rgb(0, 0, 0);
-    outline-style: dotted;
-    outline-color: rgb(211, 211, 211);
-}
-
-#text4 {
-    width: 500px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    font-size: 40px;
-    line-height: 75px;
-    color: rgb(254, 202, 15);
-    background-color: rgba(0, 0, 0, 0.488);
-    outline-style: dotted;
-    outline-color: rgb(80, 80, 80);
-}
-
-#text5 {
-    width: 500px;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 40px;
-    line-height: 75px;
-    color: rgb(0, 0, 0);
-    outline-style: dotted;
-    outline-color: rgb(211, 211, 211);
+    color: var(--cor1);
+    font-weight: 400;
 }
 
 footer {
     background-color: black;
-    font-size: 25px;
+    color: white;
     text-align: center;
-    margin: auto;
-    padding: 40px 0px 40px 0px;
-    color: rgb(254, 202, 15);
+    padding-top: 50px;
+    padding-bottom: 50px;
 
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
+    font-family: var(--Rubik), Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-style: normal;
-}
-footer>a{
-    font-family: "Rubik", sans-serif;
-    font-weight: 700;
-    color:  rgb(254, 202, 15);
-    text-decoration: none;
-}
-footer>a:hover{
-    text-decoration: underline;
-    color: rgb(255, 255, 255);
-    transition: 1s;
+    font-size: 2vw;
 }
